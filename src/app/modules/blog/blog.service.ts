@@ -11,6 +11,11 @@ export const getAllBlogsService = async() => {
     return blogs;
 }
 
+export const getBlogService = async(id: string) => {
+    const blog = await Blog.findById(id);
+    return blog;
+}
+
 export const updateBlogService = async(id: string, payload: Partial<TBlog>) => {
     const blog = await Blog.findByIdAndUpdate(id, payload, { new: true });
     return blog;
