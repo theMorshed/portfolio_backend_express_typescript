@@ -2,7 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import catchAsync from "../../utils/catchAsync";
 import sendResponse from "../../utils/sendResponse";
 import { createBlogService, deleteBlogService, getAllBlogsService, getBlogService, updateBlogService } from "./blog.service";
-import User from "../user/user.model";
+import User from "../message/message.model";
 import Blog from "./blog.model";
 import AppError from "../../errors/AppError";
 

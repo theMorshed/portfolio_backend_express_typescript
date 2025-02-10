@@ -1,4 +1,4 @@
-import { IUser } from "../modules/user/user.interface";
+import { IUser } from "../modules/message/user.interface";
 
 declare global {
   namespace Express {
