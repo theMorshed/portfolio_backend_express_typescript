@@ -5,7 +5,7 @@ import { createMessage, getAllMessages } from './message.controller';
 
 const router = Router();
 
-router.post('/', getAllMessages);
+router.get('/', getAllMessages);
 router.post('/create-message', validateRequest(createMessageSchema), createMessage);
 
 export const messageRoutes = router;
