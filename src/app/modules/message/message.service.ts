@@ -6,3 +6,8 @@ export const createMessageService = async (payload: TMessage) => {
     return message;
 };
 
+export const getAllMessagesService = async () => {
+    const messages = await Message.find({});
+    return messages;
+}
+
