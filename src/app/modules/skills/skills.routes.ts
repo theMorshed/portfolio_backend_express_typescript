@@ -5,10 +5,10 @@ import { createSkill, deleteSkill, getAllSkill, getSkill, updateSkill } from './
 
 const skillsRouter = express.Router();
 
-skillsRouter.post('/create-experience', validateRequest(createSkillSchema), createSkill);
+skillsRouter.post('/create-skill', validateRequest(createSkillSchema), createSkill);
 skillsRouter.get('/', getAllSkill);
-skillsRouter.get('/:experienceId', getSkill);
-skillsRouter.put('/:experienceId', validateRequest(updateSkillSchema), updateSkill);
-skillsRouter.delete('/:experienceId', deleteSkill);
+skillsRouter.get('/:skillId', getSkill);
+skillsRouter.put('/:skillId', validateRequest(updateSkillSchema), updateSkill);
+skillsRouter.delete('/:skillId', deleteSkill);
 
 export default skillsRouter;

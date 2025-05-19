@@ -14,7 +14,7 @@ const skillSchema = new mongoose.Schema<TSkills>(
       trim: true,
     },
     experience: {
-      type: String,
+      type: Number,
       required: false, // optional field
       trim: true,
     },

@@ -1,6 +1,6 @@
 export type TSkills = {
   name: string;
   icon: string;
-  experience?: string;
+  experience?: number;
   projectsLink?: string;
 };
