@@ -6,6 +6,8 @@ import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import notFound from './app/middlewares/notFound';
 import { messageRoutes } from './app/modules/message/message.routes';
 import { blogRoutes } from './app/modules/blog/blog.routes';
+import experienceRouter from './app/modules/experience/experience.routes';
+import skillsRouter from './app/modules/skills/skills.routes';
 
 // Initialize the Express application
 const app: Application = express();
@@ -15,7 +17,7 @@ const app: Application = express();
 app.use(express.json());
 
 // Middleware to allow cross-origin requests
-app.use(cors({ origin: ['https://portfoliomorshed.vercel.app'], credentials: true }));
+app.use(cors({ origin: ['https://portfoliomorshed.vercel.app', 'http://localhost:3000'], credentials: true }));
 // app.use(cors({ origin: ['http://localhost:3000'], credentials: true }));
 
 // API Routes setup
@@ -23,6 +25,8 @@ app.use(cors({ origin: ['https://portfoliomorshed.vercel.app'], credentials: tru
 app.use('/api/projects', projectRouter);
 app.use('/api/blogs', blogRoutes);
 app.use('/api/message', messageRoutes);
+app.use('/api/experience', experienceRouter);
+app.use('/api/skills', skillsRouter);
 
 // Root route that sends a simple "Hello, World!" message
 app.get('/', (req, res) => {
